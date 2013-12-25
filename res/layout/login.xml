@@ -6,11 +6,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
     tools:context=".LoginActivity" >
 
-    <TextView
+    <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:padding="20dip"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <EditText 
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:hint="Username"
+            />
+        <EditText 
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:hint="Password"
+            />
+        <Button 
+            android:layout_height="45dip"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login"
+            />
+    </LinearLayout>
+    
+    <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:text="just for fun!!!"
+        />
 
 </RelativeLayout>
