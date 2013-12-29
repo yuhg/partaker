@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res/com.fb.partaker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="------------asd" />
+
+    <!-- 原生控件实现抽屉 -->
+
+    <SlidingDrawer
+        android:id="@+id/menu_Drawer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:content="@+id/menu_Content"
+        android:handle="@+id/menu_Handle"
+        android:orientation="horizontal"
+        android:topOffset="200dip" >
+
+        <LinearLayout
+            android:id="@id/menu_Handle"
+            android:layout_width="10dip"
+            android:layout_height="fill_parent"
+            android:background="@color/yellow"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/menu_Content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/translucent" >
+
+            <ListView
+                android:id="@+id/menu_Content_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:gravity="center" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <!-- 自定义view -->
+
+    <com.fb.partaker.view.Panel
+        android:id="@+id/leftPanel1"
+        android:layout_width="200dip"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left"
+        android:background="@color/transparent"
+        panel:position="left" >
+
+        <LinearLayout
+            android:id="@id/panelHandle"
+            android:layout_width="10dip"
+            android:layout_height="fill_parent"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/panelContent"
+            android:layout_width="190dip"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/menu_Content_list2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/gray"
+                android:gravity="center" />
+        </LinearLayout>
+    </com.fb.partaker.view.Panel>
+
+</FrameLayout>
